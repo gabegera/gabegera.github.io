@@ -50,7 +50,6 @@ p {
 }
 
 code {
-
   font-family: var(--code-font), monospace;
   font-weight: lighter;
   font-size: var(--font-size);
@@ -147,10 +146,19 @@ code {
   background-color: var(--sub-background-color);
 }
 
+.grid-item-horizontal {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: var(--box-radius);
+  background-color: var(--sub-background-color);
+}
+
 .project-video {
   width: 100%;
   aspect-ratio: 16 / 9;
-  border-radius: 6px
+  border-radius: 6px;
+  margin-bottom: 16px;
 }
 
 .grid-item-title {
@@ -247,4 +255,38 @@ code {
 
 .code-block-file-name-header {
   font-family: var(--code-font), monospace;
+}
+
+.media-with-summary-div {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--grid-gap-size);
+}
+
+.project-image {
+  object-fit: contain;
+}
+
+/* CSS overrides for Mobile */
+@media screen and (max-width: 720px)
+{
+  :root {
+    --max-page-width: 540px;
+  }
+
+  .grid-container {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .skills-grid-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -10,7 +10,10 @@
     <!--  CODE HIGHLIGHTING  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/bright.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <script>
+        import hljs from "highlight.js";
+
+        hljs.highlightAll();</script>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -30,7 +33,14 @@
     <div class="title-bar-div">
 
         <a href="index.html" style="text-decoration: none;">
-            <h1 class="header-text">Gabriel Gera</h1>
+            <div class="title-bar-title-div">
+                <img class="portrait-img" src="img/portrait.jpg" alt="">
+                <div style="flex-direction: column;">
+                    <h1 class="header-text" style="margin-bottom: 0; margin-top: 0">Gabriel Gera</h1>
+                    <h1 class="tagline-text" style="margin-bottom: 0; margin-top: 0">Gameplay Programmer</h1>
+                    <h1 class="tagline-text" style="margin-bottom: 0; margin-top: 0">Bonney Lake, WA</h1>
+                </div>
+            </div>
         </a>
 
         <div class="title-bar-img-div">
@@ -45,7 +55,7 @@
 
     </div>
 </section>
-<div style="margin-bottom: 80px"></div>
+<div style="margin-bottom: 110px"></div> <!-- Used to add spacing below the title bar -->
 
 <div>
 
