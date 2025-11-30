@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="36babbdb-affa-4bee-aa07-33a1a7320ce2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/js/file-selector.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strategy-game-project.html" beforeDir="false" afterPath="$PROJECT_DIR$/strategy-game-project.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="33QyA84ErNMLT1N72WwLCbbfLxs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "disable.download.node.interpreter.editor.notification": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/gabeg/Documents/Github Projects/gabegera.github.io",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/videos" />
+      <recent name="C:\Users\gabeg\Documents\Github Projects\gabegera.github.io_REMAKE" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-WS-252.26830.93" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36babbdb-affa-4bee-aa07-33a1a7320ce2" name="Changes" comment="" />
+      <created>1759263443973</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1759263443973</updated>
+      <workItem from="1759263445325" duration="3876000" />
+      <workItem from="1759268535657" duration="9674000" />
+      <workItem from="1759308142889" duration="376000" />
+      <workItem from="1759369866195" duration="321000" />
+      <workItem from="1759398423584" duration="457000" />
+      <workItem from="1759399067705" duration="613000" />
+      <workItem from="1759382729914" duration="21000" />
+      <workItem from="1759698539281" duration="1577000" />
+      <workItem from="1759737836213" duration="1958000" />
+      <workItem from="1759862451250" duration="7242000" />
+      <workItem from="1759870391436" duration="11000" />
+      <workItem from="1759870409625" duration="43000" />
+      <workItem from="1759912088638" duration="4780000" />
+      <workItem from="1759917455610" duration="560000" />
+      <workItem from="1759952059499" duration="3250000" />
+      <workItem from="1759955890282" duration="423000" />
+      <workItem from="1759956597732" duration="26000" />
+      <workItem from="1759956782618" duration="721000" />
+      <workItem from="1759957549147" duration="1000" />
+      <workItem from="1759957725322" duration="3000" />
+      <workItem from="1759962986630" duration="8000" />
+      <workItem from="1760146604723" duration="204000" />
+      <workItem from="1761362812877" duration="58000" />
+      <workItem from="1762157348556" duration="17000" />
+      <workItem from="1762414014647" duration="40000" />
+      <workItem from="1763873609888" duration="61000" />
+      <workItem from="1764195276608" duration="1078000" />
+      <workItem from="1764211839150" duration="1987000" />
+      <workItem from="1764220951639" duration="9674000" />
+      <workItem from="1764302122052" duration="68000" />
+      <workItem from="1764318599349" duration="4899000" />
+      <workItem from="1764363695417" duration="4238000" />
+      <workItem from="1764409490646" duration="7000" />
+      <workItem from="1764447988701" duration="12063000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
