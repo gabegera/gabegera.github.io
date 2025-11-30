@@ -8,8 +8,8 @@
   --font-size-header: 36px;
 
   --primary-color: #daecf0;
-  --background-color: #1d1c1c;
-  --sub-background-color: #313131;
+  --background-color: #191919;
+  --sub-background-color: #232323;
   --line-width: 2px;
   --max-page-width: 940px;
   --section-height: 48px;
@@ -296,7 +296,7 @@ code {
   object-fit: cover;
   aspect-ratio: 16 / 9;
   height: auto;
-  width: 100%;
+  width: 500px;
   border-radius: var(--box-radius);
 }
 
@@ -304,7 +304,7 @@ code {
   font-size: 24px;
   margin-top: 20px;
   margin-bottom: 0;
-  height: 24px;
+  height: fit-content;
 }
 
 .highlighted-text {
@@ -344,6 +344,10 @@ code {
 
   .mechanics-title {
     margin-top: -36px;
+  }
+
+  .mechanics-media {
+    width: 100%;
   }
 }
 

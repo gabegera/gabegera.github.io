@@ -62,7 +62,7 @@
 
 <div>
 
-    <video class="mechanics-media" autoplay muted loop src="videos/resources-example.webm"></video>
+    <video class="project-video" autoplay muted loop src="videos/resources-example.webm"></video>
 
 </div>
 
@@ -88,7 +88,7 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <video class="mechanics-media" autoplay muted loop src="videos/resources-example.webm"></video>
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Grid Based Building</h2>
@@ -100,7 +100,7 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <video class="mechanics-media" autoplay muted loop src="videos/resources-example.webm"></video>
+        <video class="mechanics-media" autoplay muted loop controls src="videos/resources-example.webm"></video>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Resource Management</h2>
@@ -117,7 +117,7 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <video class="mechanics-media" autoplay muted loop src="videos/resources-example.webm"></video>
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Structures</h2>
@@ -135,6 +135,28 @@
             Workers Component</a>.
             <br> By using a component system it's far easier to make any kind of structure
             that might be needed now or in the future.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <video class="mechanics-media" autoplay muted loop controls src="videos/terminal-example.webm"></video>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Terminals</h2>
+        <p class="grid-item-summary">
+            <a class="highlighted-text"
+               href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interactables/Terminal.h" target="_blank">
+                Terminals</a>
+            are interactive objects that can trigger certain events if the correct command is entered.
+            Commands can easily be added via the Terminal's blueprint class. By selecting the 'Command Type' and
+            entering the command itself it'll be added to an array of commands. The 'Remote Trigger' command type will use
+            the
+            <a class="highlighted-text"
+               href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interfaces/RemoteTriggerInterface.h" target="_blank">
+                Remote Trigger Interface</a>
+            to attempt to remotely activate any of the selected targets.
         </p>
     </div>
 </div>
