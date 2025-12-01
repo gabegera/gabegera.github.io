@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Movement Shooter Project</title>
+    <title>Strategy Game Project</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="">
 
@@ -13,7 +13,10 @@
     <script>
         import hljs from "highlight.js";
 
-        hljs.highlightAll();</script>
+        hljs.highlightAll();
+    </script>
+
+    <script src="js/index.js"></script>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -35,7 +38,7 @@
         <a href="index.html" style="text-decoration: none;">
             <div class="title-bar-title-div">
                 <img class="portrait-img" src="img/portrait.jpg" alt="">
-                <div style="flex-direction: column;">
+                <div style="flex-direction: column; margin-left: 8px">
                     <h1 class="header-text" style="margin-bottom: 0; margin-top: 0">Gabriel Gera</h1>
                     <h1 class="tagline-text" style="margin-bottom: 0; margin-top: 0">Gameplay Programmer</h1>
                     <h1 class="tagline-text" style="margin-bottom: 0; margin-top: 0">Bonney Lake, WA</h1>
@@ -59,10 +62,133 @@
 
 <div>
 
-    <video class="project-video" autoplay muted loop src="videos/TestVideo.mp4"></video>
+    <img class="project-video" src="img/placeholder-1920x1080.png" alt=""></img>
 
 </div>
 
+<!-- PROJECT SUMMARY HEADER -->
+<div class="section-header-div">
+    <h1 class="section-header-text">
+        Movement Shooter
+    </h1>
+</div>
+
+<div>
+    <p class="paragraph">
+        This was my final project for my CG Spectrum certification course. It was my the first time they let us develop whatever we wanted without much guidance.
+
+    </p>
+</div>
+
+<button class="project-page-button" onclick="openLink('https://github.com/gabegera/Gera_MovementShooter')"> <img src="img/githubicon_black.svg" alt="" class="project-page-button-icon">
+    View GitHub Project Page
+</button>
+
+<div class="section-header-div">
+    <h1 class="section-header-text">
+        Mechanics and Highlights
+    </h1>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Data Table Based Items</h2>
+        <p class="grid-item-summary">
+            I was learning about Data Tables while working on this project, so I decided to use them to house all my different weapon types.
+            The
+            <a class="highlighted-text" href="https://github.com/gabegera/Gera_MovementShooter/blob/main/Source/Gera_MovementShooter/Public/WeaponData.h" target="_blank">
+                Weapon Data
+            </a>
+            class houses all the variables necessary to create a variety of different weapons by simply changing some parameters.
+            Doing weapons this way made it much easier to change any weapons properties without having to go digging in their Blueprints.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Double Jump and Dash</h2>
+        <p class="grid-item-summary">
+            The Player character has movement very similar to Doom Eternal. They are able to double jump and have a dash move that only recharges when on the ground.
+            The Dash uses the normal of the ground below the player to ensure that it's consistent on flat ground and when using it on slopes.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Weapon Feel</h2>
+        <p class="grid-item-summary">
+            Weapons can be either Hitscan or Projectile based. They have been programmed to add physics impulses to whatever objects they hit.
+            Weapons have a recoil property that can move the camera forcing the player to control the weapon. There is also a recoil recovery
+            system returning the crosshair to it's starting position if the player didn't move the camera.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Grenades</h2>
+        <p class="grid-item-summary">
+            There are two types of grenades, Frag Grenades and Sticky Grenades. Frags will bounce around while Sticky 'Nades will get stuck to
+            any physics object. Either grenade can be shot at for an early detonation and they will apply a physics impulse when exploding.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Utility Items</h2>
+        <p class="grid-item-summary">
+            There are a variety of Utility items that can heal, give a damage boost, give a speed boost, or even allow you to activate
+            bullet time.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Weapon Slots</h2>
+        <p class="grid-item-summary">
+            There are 3 weapon slots:
+            <br> a Primary Slot,
+            <br> a Secondary Slot,
+            <br> and a Heavy/Special Slot.
+            When picking up new weapons they will always go into their designated slots.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Weapon and Ammo Pickups</h2>
+        <p class="grid-item-summary">
+            Ammo is collected by running into floating pickups. There are also weapon pickups where you can either grab new weapons
+            or swap out your currently equipped ones. The weapon pickups are color coded based on the slot they occupy.
+        </p>
+    </div>
+</div>
 
 </body>
 

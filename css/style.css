@@ -8,6 +8,7 @@
   --font-size-header: 36px;
 
   --primary-color: #daecf0;
+  --secondary-color: orange;
   --background-color: #191919;
   --sub-background-color: #232323;
   --line-width: 2px;
@@ -153,7 +154,7 @@ code {
   flex-direction: column;
   padding: 10px;
   border-radius: var(--box-radius);
-  background-color: var(--sub-background-color);
+  background-color: var(--sub-background-color)
 }
 
 .grid-item-horizontal {
@@ -166,7 +167,7 @@ code {
 
 .project-video {
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   border-radius: 6px;
   aspect-ratio: 16 / 9;
 }
@@ -198,13 +199,14 @@ code {
 
 .project-button {
   font-family: var(--main-font), sans-serif;
-  font-weight: lighter;
+  font-size: 18px;
+  font-weight: bold;
   height: 40px;
   cursor: pointer;
-  color: var(--primary-color);
+  color: black;
   border: none;
   border-radius: 4px;
-  background-color: black;
+  background-color: var(--secondary-color);
 }
 
 .skills-grid-container {
@@ -293,7 +295,7 @@ code {
 
 .mechanics-media {
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   aspect-ratio: 16 / 9;
   height: auto;
   width: 500px;
@@ -302,19 +304,46 @@ code {
 
 .mechanics-title {
   font-size: 24px;
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 0;
   height: fit-content;
 }
 
 .highlighted-text {
-  color: orange;
+  color: var(--secondary-color);
   background: transparent;
   border: none;
   outline: none;
   text-decoration: none;
   font-style: italic;
   /*cursor: pointer;*/
+}
+
+.project-page-button {
+  font-family: var(--main-font), sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  height: fit-content;
+  margin: auto;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border: none;
+  border-radius: var(--box-radius);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+.project-page-button-icon {
+  display: flex;
+  height: 32px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 8px;
+
 }
 
 /* CSS overrides for Mobile */
@@ -360,6 +389,17 @@ code {
     align-self: center;
     max-width: 0;
     max-height: 0;
+  }
+
+  .project-page-button-icon {
+    position: fixed;
+    align-self: center;
+    max-width: 0;
+    max-height: 0;
+  }
+
+  .project-page-button {
+    flex-direction: column;
   }
 }
 
