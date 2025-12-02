@@ -92,12 +92,22 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+        <img class="mechanics-media" id="subsystems-img" src="img/subsystems-example.jpg" alt="" onclick="toggleFullscreen('subsystems-img')"></img>
     </div>
     <div class="mechanics-grid-item">
-        <h2 class="mechanics-title">Grid Based Building</h2>
+        <h2 class="mechanics-title">Subsystems</h2>
         <p class="grid-item-summary">
-
+            Much of the games logic is held inside various subsystems. These include:
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/ResourcesSubsystem.h" target="_blank">
+            Resources Subsystem </a>,
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/TimeSubsystem.h" target="_blank">
+            Time Subsystem</a>,
+            <br> and an <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/UnlocksSubsystem.h" target="_blank">
+            Unlocks Subsystem</a>,
+            <br> These subsystems are the backbone of the project and house some of the most important data
+            needed. They inherit from the Game Instance Subsystem allowing them to exist between levels for the
+            entire time the game is running. They can be easily accessed by any other class or blueprint that might need
+            to do so.
         </p>
     </div>
 </div>
@@ -112,7 +122,7 @@
             Resources for the city are all handled inside the
             <a class="highlighted-text"
                href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/ResourcesSubsystem.h" target="_blank">
-                ResourcesSubsystem</a>.
+                Resources Subsystem</a>.
             It inherits from GameInstanceSubsystem allowing access from anywhere in the project and making it constant across all levels.
             Resources are gathered using different structures which need workers to function properly.
         </p>
