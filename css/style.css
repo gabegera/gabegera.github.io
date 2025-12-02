@@ -304,7 +304,7 @@ code {
   height: auto;
   width: 500px;
   border-radius: var(--box-radius);
-  cursor: pointer;
+  /*cursor: pointer;*/
 }
 
 .fullscreen-media {
@@ -315,7 +315,7 @@ code {
   height: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
-  cursor: pointer;
+  cursor: zoom-out;
 }
 
 .mechanics-title {
