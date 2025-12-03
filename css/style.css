@@ -6,7 +6,6 @@
   --code-font: 'Jetbrains Mono';
   --font-size: 16px;
   --font-size-header: 36px;
-
   --primary-color: #daecf0;
   --secondary-color: orange;
   --background-color: #191919;
@@ -71,6 +70,7 @@ code {
   left: 0;
   top: 0;
   width: 100%;
+  height: fit-content;
   border-bottom: var(--line-width) solid var(--primary-color);
   background-color: var(--background-color);
 }
@@ -304,7 +304,8 @@ code {
   height: auto;
   width: 500px;
   border-radius: var(--box-radius);
-  /*cursor: pointer;*/
+  cursor: zoom-in;
+  pointer-events: auto;
 }
 
 .fullscreen-media {
@@ -316,6 +317,8 @@ code {
   aspect-ratio: 16 / 9;
   object-fit: contain;
   cursor: zoom-out;
+  background-color: black;
+  pointer-events: auto;
 }
 
 .mechanics-title {
@@ -366,6 +369,18 @@ code {
 @media screen and (max-width: 800px) {
   :root {
     --max-page-width: 540px;
+  }
+
+  .title-bar-div {
+    height: 64px;
+  }
+
+  .portrait-img {
+    display: none;
+  }
+
+  .tagline-text {
+    display: none;
   }
 
   .grid-container {
@@ -421,4 +436,13 @@ code {
   .mechanics-title {
     height: fit-content;
   }
+}
+
+.background-video {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
 }

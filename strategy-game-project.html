@@ -80,7 +80,8 @@
     </p>
 </div>
 
-<button class="project-page-button" onclick="openLink('https://github.com/gabegera/StrategyGame')"> <img src="img/githubicon_black.svg" alt="" class="project-page-button-icon">
+<button class="project-page-button" id="project-page-button" onclick="openLink('https://github.com/gabegera/StrategyGame')">
+    <img src="img/githubicon_black.svg" alt="" class="project-page-button-icon">
     View GitHub Project Page
 </button>
 
@@ -92,7 +93,7 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <img class="mechanics-media" id="subsystems-img" style="cursor: zoom-in" src="img/subsystems-example.jpg" alt="" onclick="toggleFullscreen('subsystems-img')"></img>
+        <img class="mechanics-media" id="subsystems-media" src="img/subsystems-example.jpg" alt=""></img>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Subsystems</h2>
@@ -114,24 +115,19 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <video class="mechanics-media" autoplay muted loop controls src="videos/resources-example.webm"></video>
+        <video class="mechanics-media" id="resources-media" autoplay muted loop src="videos/resources-example.webm"></video>
     </div>
     <div class="mechanics-grid-item">
-        <h2 class="mechanics-title">Resource Management</h2>
+        <h2 class="mechanics-title">City Building</h2>
         <p class="grid-item-summary">
-            Resources for the city are all handled inside the
-            <a class="highlighted-text"
-               href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/ResourcesSubsystem.h" target="_blank">
-                Resources Subsystem</a>.
-            It inherits from GameInstanceSubsystem allowing access from anywhere in the project and making it constant across all levels.
-            Resources are gathered using different structures which need workers to function properly.
+            Structures can be selected via UI elements and are built using a grid system.
         </p>
     </div>
 </div>
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <img class="mechanics-media" src="img/placeholder-1920x1080.png" alt=""></img>
+        <img class="mechanics-media" id="structures-media" src="img/placeholder-1920x1080.png" alt=""></img>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Structures</h2>
@@ -155,22 +151,48 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <video class="mechanics-media" autoplay muted loop controls src="videos/terminal-example.webm"></video>
+        <img class="mechanics-media" id="structure-mesh-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Randomized Structure Meshes</h2>
+        <p class="grid-item-summary">
+            As a way to add a bit more visual variety, multiple different meshes can be added to structures.
+            These meshes are soft pointers, preserving memory. When the structure is placed one of the meshes are randomly picked
+            and loaded in asynchronously to prevent any stutters or hitches.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <video class="mechanics-media" id="terminals-media" autoplay muted loop src="videos/terminal-example.webm"></video>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Terminals</h2>
         <p class="grid-item-summary">
             <a class="highlighted-text"
-               href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interactables/Terminal.h" target="_blank">
-                Terminals</a>
+            href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interactables/Terminal.h" target="_blank">
+            Terminals</a>
             are interactive objects that can trigger certain events if the correct command is entered.
             Commands can easily be added via the Terminal's blueprint class. By selecting the 'Command Type' and
             entering the command itself it'll be added to an array of commands. The 'Remote Trigger' command type will use
             the
             <a class="highlighted-text"
-               href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interfaces/RemoteTriggerInterface.h" target="_blank">
-                Remote Trigger Interface</a>
+            href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interfaces/RemoteTriggerInterface.h" target="_blank">
+            Remote Trigger Interface</a>
             to attempt to remotely activate any of the selected targets.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="objectives-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Objectives</h2>
+        <p class="grid-item-summary">
+
         </p>
     </div>
 </div>

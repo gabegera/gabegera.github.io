@@ -1,18 +1,62 @@
-﻿function openLink(inLink) {
+﻿document.addEventListener('click', function(event) {
+   if (event.target.classList.contains('mechanics-media')) {
+       if (event.target.classList.contains('fullscreen-media')) {
+           exitFullscreen(event.target.id)
+       }
+       else {
+           enterFullscreen(event.target.id)
+       }
+   }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        let fullscreenElements = document.getElementsByClassName('fullscreen-media')
+        for (const element of fullscreenElements) {
+            exitFullscreen(element.id);
+        }
+    }
+})
+
+function openLink(inLink) {
     window.open(inLink, "_blank");
 }
 
-function toggleFullscreen(inID) {
+function enterFullscreen(inID) {
     const element = document.getElementById(inID);
 
-    if (element) {
-        if (element.classList.contains("fullscreen-media")) {
-            element.classList.remove("fullscreen-media");
-            element.classList.add("mechanics-media");
+    let fullscreenElements = document.getElementsByClassName("fullscreen-media");
+    if (fullscreenElements.length > 0)
+    {
+        // This is a very janky solution to make sure that other elements don't go fullscreen if another element is already fullscreen.
+        let isFullscreenTargetCorrect = false;
+
+        for (const element of fullscreenElements) {
+            if (element.id === inID)
+            {
+                isFullscreenTargetCorrect = true;
+            }
+
+            if (!isFullscreenTargetCorrect)
+            {
+                return;
+            }
         }
-        else {
-            element.classList.remove("mechanics-media");
-            element.classList.add("fullscreen-media");
-        }
+    }
+
+    if (element)
+    {
+        element.classList.add('fullscreen-media');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function exitFullscreen(inID) {
+    const element = document.getElementById(inID);
+
+    if (element)
+    {
+        element.classList.remove('fullscreen-media');
+        document.body.style.overflow = 'auto';
     }
 }
