@@ -170,15 +170,13 @@
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Terminals</h2>
         <p class="grid-item-summary">
-            <a class="highlighted-text"
-            href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interactables/Terminal.h" target="_blank">
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interactables/Terminal.h" target="_blank">
             Terminals</a>
             are interactive objects that can trigger certain events if the correct command is entered.
             Commands can easily be added via the Terminal's blueprint class. By selecting the 'Command Type' and
             entering the command itself it'll be added to an array of commands. The 'Remote Trigger' command type will use
             the
-            <a class="highlighted-text"
-            href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interfaces/RemoteTriggerInterface.h" target="_blank">
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interfaces/RemoteTriggerInterface.h" target="_blank">
             Remote Trigger Interface</a>
             to attempt to remotely activate any of the selected targets.
         </p>
@@ -192,7 +190,9 @@
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Objectives</h2>
         <p class="grid-item-summary">
-
+            Objectives are a struct that can have multiple types which dictates when progress is made. Currently, the implemented types are either
+            killing enemies or destroying destructible targets. When these actions are completed a delegate will be broadcast for other classes to
+            react.
         </p>
     </div>
 </div>
