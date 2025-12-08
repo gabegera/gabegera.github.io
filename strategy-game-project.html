@@ -93,6 +93,19 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
+        <video class="mechanics-media" id="modes-media" autoplay muted loop src="videos/rts-fps-modes-example.webm"></video>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Switching Between RTS and FPS Modes</h2>
+        <p class="grid-item-summary">
+            In the player's control room there is a terminal that when interacted with will switch over to
+            a top down RTS mode. Pressing Escape (or 'P' in the editor) will return back to the first person character.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
         <img class="mechanics-media" id="subsystems-media" src="img/subsystems-example.jpg" alt=""></img>
     </div>
     <div class="mechanics-grid-item">
@@ -165,6 +178,19 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="save-files-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Save Files</h2>
+        <p class="grid-item-summary">
+            There is a saving and a loading system in place. When the game saves it collects all necessary data from the player, structures,
+            citizens, and resources.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
         <video class="mechanics-media" id="terminals-media" autoplay muted loop src="videos/terminal-example.webm"></video>
     </div>
     <div class="mechanics-grid-item">
@@ -185,13 +211,32 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="turret-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Remote Control Turret</h2>
+        <p class="grid-item-summary">
+            In the main base there is a
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Turrets/RemoteTurretSeat.h" target="_blank">
+            Seat</a>
+            connected to a
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Turrets/RemoteControlTurret.h" target="_blank">
+            Remote Turret</a>
+            that can be interacted with.
+            The turret is rendering its camera to a material for the player to see what the turret aiming at.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
         <img class="mechanics-media" id="objectives-media" src="img/placeholder-1920x1080.png" alt=""></img>
     </div>
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Objectives</h2>
         <p class="grid-item-summary">
             Objectives are a struct that can have multiple types which dictates when progress is made. Currently, the implemented types are either
-            killing enemies or destroying destructible targets. When these actions are completed a delegate will be broadcast for other classes to
+            killing enemies or destroying destructible targets. When these actions are completed, a delegate will be broadcast for other classes to
             react.
         </p>
     </div>

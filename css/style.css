@@ -317,7 +317,8 @@ code {
   aspect-ratio: 16 / 9;
   object-fit: contain;
   cursor: zoom-out;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
   pointer-events: auto;
 }
 
