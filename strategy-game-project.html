@@ -112,11 +112,11 @@
         <h2 class="mechanics-title">Subsystems</h2>
         <p class="grid-item-summary">
             Much of the games logic is held inside various subsystems. These include:
-            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/ResourcesSubsystem.h" target="_blank">
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Game/ResourcesSubsystem.cpp" target="_blank">
             Resources Subsystem </a>,
-            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/TimeSubsystem.h" target="_blank">
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Game/TimeSubsystem.cpp" target="_blank">
             Time Subsystem</a>,
-            <br> and an <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/UnlocksSubsystem.h" target="_blank">
+            <br> and an <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Game/UnlocksSubsystem.cpp" target="_blank">
             Unlocks Subsystem</a>,
             <br> These subsystems are the backbone of the project and house some of the most important data
             needed. They inherit from the Game Instance Subsystem allowing them to exist between levels for the
@@ -146,15 +146,15 @@
         <h2 class="mechanics-title">Structures</h2>
         <p class="grid-item-summary">
             Structures are built using a component system. These components include:
-            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Components/HousingComponent.h" target="_blank">
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Components/HousingComponent.cpp" target="_blank">
             Housing Component </a>,
-            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Components/ResourceGenerationComponent.h" target="_blank">
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Components/ResourceGenerationComponent.cpp" target="_blank">
             Resource Generation Component</a>,
-            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Components/ResourceHarvestingComponent.h" target="_blank">
+            <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Components/ResourceHarvestingComponent.cpp" target="_blank">
             Resource Harvesting Component</a>,
             <br> a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Components/ResourceStorageComponent.h" target="_blank">
             Resource Storage Component</a>,
-            <br> and a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Components/WorkersComponent.h" target="_blank">
+            <br> and a <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Components/WorkersComponent.cpp" target="_blank">
             Workers Component</a>.
             <br> By using a component system it's far easier to make any kind of structure
             that might be needed now or in the future.
@@ -178,13 +178,19 @@
 
 <div class="mechanics-grid-container">
     <div class="mechanics-grid-item">
-        <img class="mechanics-media" id="save-files-media" src="img/placeholder-1920x1080.png" alt=""></img>
+        <video class="mechanics-media" id="save-files-media" autoplay muted loop src="videos/saving-loading-example.webm"></video>
     </div>
     <div class="mechanics-grid-item">
-        <h2 class="mechanics-title">Save Files</h2>
+        <h2 class="mechanics-title">Saving and Loading</h2>
         <p class="grid-item-summary">
-            There is a saving and a loading system in place. When the game saves it collects all necessary data from the player, structures,
-            citizens, and resources.
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Game/StrategySaveGame.h" target="_blank">
+            Save Files</a>
+            are managed in the
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Game/StrategyGameInstance.cpp" target="_blank">
+            Strategy Game Instance</a>
+            class. When the game saves it
+            collects all necessary data from the player, structures, citizens, and resources. When that save files
+            gets loaded it then respawns all necessary actors and sets all the correct data that was saved.
         </p>
     </div>
 </div>
@@ -196,7 +202,7 @@
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Terminals</h2>
         <p class="grid-item-summary">
-            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Interactables/Terminal.h" target="_blank">
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Interactables/Terminal.cpp" target="_blank">
             Terminals</a>
             are interactive objects that can trigger certain events if the correct command is entered.
             Commands can easily be added via the Terminal's blueprint class. By selecting the 'Command Type' and
@@ -217,10 +223,10 @@
         <h2 class="mechanics-title">Remote Control Turret</h2>
         <p class="grid-item-summary">
             In the main base there is a
-            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Turrets/RemoteTurretSeat.h" target="_blank">
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Turrets/RemoteTurretSeat.cpp" target="_blank">
             Seat</a>
             connected to a
-            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Public/Turrets/RemoteControlTurret.h" target="_blank">
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Turrets/RemoteControlTurret.cpp" target="_blank">
             Remote Turret</a>
             that can be interacted with.
             The turret is rendering its camera to a material for the player to see what the turret aiming at.
@@ -235,7 +241,9 @@
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Automatic Turret</h2>
         <p class="grid-item-summary">
-            Automatic turrets have a set range and whenever an enemy enters that range they will lock on and shoot in the target's direction.
+            <a class="highlighted-text" href="https://github.com/gabegera/StrategyGame/blob/main/Source/StrategyGame/Private/Turrets/AutomatedTurret.cpp" target="_blank">
+            Automated Turrets</a>
+            have a set range and whenever an enemy enters that range they will lock on and shoot in the target's direction.
         </p>
     </div>
 </div>
