@@ -12,5 +12,6 @@
     <orderEntry type="library" name="bright" level="application" />
     <orderEntry type="library" name="highlight.js" level="application" />
     <orderEntry type="library" name="highlight.js" level="application" />
+    <orderEntry type="library" name="highlightjs-line-numbers.js" level="application" />
   </component>
 </module>

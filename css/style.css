@@ -265,7 +265,7 @@ code {
 
 .code-block-div {
   overflow: auto;
-  min-width: 360px;
+  width: var(--max-page-width);
   padding: 12px;
   background-color: black;
 }
@@ -366,6 +366,10 @@ code {
 
 }
 
+.title-bar-spacing {
+  margin-bottom: 110px;
+}
+
 /* CSS overrides for Mobile */
 @media screen and (max-width: 800px) {
   :root {
@@ -374,6 +378,10 @@ code {
 
   .title-bar-div {
     height: 64px;
+  }
+
+  .title-bar-spacing {
+    margin-bottom: 72px;
   }
 
   .portrait-img {

@@ -50,3 +50,40 @@ function exitAllFullscreenElements() {
 
     return wasSuccessful;
 }
+
+function setTargetGithubCode(inHeaderLink, inCPPLink) {
+
+    fetchRawGithubText(inHeaderLink).then(text => {
+        if (text != null) {
+            localStorage.setItem('headerLink', inHeaderLink);
+            localStorage.setItem('headerCode', text);
+        }
+    });
+
+    fetchRawGithubText(inCPPLink).then(text => {
+        if (text != null) {
+            localStorage.setItem('headerLink', inCPPLink);
+            localStorage.setItem('cppCode', text);
+        }
+    });
+}
+
+async function fetchRawGithubText(url) {
+    try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error('Failed to fetch Github Raw Text');
+        }
+
+        const rawText = await response.text();
+        rawText.replaceAll('<', '&lt;')
+        rawText.replaceAll('>', '&gt;')
+        rawText.replaceAll('&', '&amp;')
+        return rawText;
+
+    } catch (error) {
+        console.error("Fetch Failed: ", error);
+        return null;
+    }
+}
