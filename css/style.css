@@ -370,6 +370,10 @@ code {
   margin-bottom: 110px;
 }
 
+.subdirectory-arrow {
+    height: var(--font-size);
+}
+
 /* CSS overrides for Mobile */
 @media screen and (max-width: 800px) {
   :root {

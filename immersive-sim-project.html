@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Strategy Game Project</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+
+    <script src="./js/index.js"></script>
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+</head>
+
+<body>
+
+<!-- WIP WARNING-->
+<p style="position: fixed; bottom: 0; right: 10px; text-align: right; color: black; background-color: orange; padding: 4px; border-radius: 2px; font-weight: bold">
+    WARNING: Site Under Maintenance <br>
+    Many things are still unfinished.
+</p>
+
+<!--TITLE BAR-->
+<section class="title-bar-section">
+    <div class="title-bar-div">
+
+        <a href="index.html" style="text-decoration: none;">
+            <div class="title-bar-title-div">
+                <img class="portrait-img" src="img/portrait.jpg" alt="">
+                <div style="flex-direction: column;">
+                    <h1 class="header-text" style="margin-bottom: 0; margin-top: 0">Gabriel Gera</h1>
+                    <h1 class="tagline-text" style="margin-bottom: 0; margin-top: 0">Gameplay Programmer</h1>
+                    <h1 class="tagline-text" style="margin-bottom: 0; margin-top: 0">Bonney Lake, WA</h1>
+                </div>
+            </div>
+        </a>
+
+        <div class="title-bar-img-div">
+            <a href="https://www.linkedin.com/in/ggera/" target="_blank" class="title-bar-button">
+                <img src="img/linkedin-icon.svg" alt="" class="title-bar-img">
+            </a>
+
+            <a href="https://github.com/gabegera" target="_blank" class="title-bar-button">
+                <img src="img/githubicon.svg" alt="" class="title-bar-img">
+            </a>
+        </div>
+
+    </div>
+</section>
+<div class="title-bar-spacing"></div> <!-- Used to add spacing below the title bar -->
+
+<div>
+
+    <video class="project-video" autoplay playsinline muted loop src="videos/strategy-game/resources-example.webm"></video>
+
+</div>
+
+<div>
+    <div style="background-color: red; border-radius: 4px; width: fit-content; margin-right: auto; margin-left: 0;">
+        <img style="height: 24px; margin: auto 8px;" src="img/warning.svg" alt="">
+        <p style="color:black; font-weight: bold; margin-right: 8px; margin-top: 4px; margin-bottom: 4px;">
+            Project in Active Development</p>
+    </div>
+</div>
+
+<!-- PROJECT SUMMARY HEADER -->
+<div class="section-header-div">
+    <h1 class="section-header-text">
+        Immersive Sim
+    </h1>
+</div>
+
+<div>
+    <p class="paragraph">
+        This project is an FPS game which is heavily inspired by the System Shock Remake. The development of this project came
+        about because I wanted to learn how to effectively create Modules and use them in my projects. Almost all core features
+        are stored in their own Modules making the code portable and hopefully more organized.
+    </p>
+</div>
+
+<button class="project-page-button" id="project-page-button" onclick="openLink('https://github.com/gabegera/ImmersiveSim')">
+    <img src="img/githubicon_black.svg" alt="" class="project-page-button-icon">
+    View GitHub Project Page
+</button>
+
+<div class="section-header-div">
+    <h1 class="section-header-text">
+        Mechanics and Highlights
+    </h1>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="modules-media" src="img/placeholder-1920x1080.png" alt=""></img>
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Modules</h2>
+        <p class="grid-item-summary">
+            Whenever adding a new feature into the project I always try to separate the code into modules that makes sense.
+            Some of the modules are dependent on others. An example of this being how the Equippables Module requires the
+            Interaction Modules. The current setup for dependencies looks something like this: <br>
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/tree/main/Source/InteractionSystem" target="_blank">
+                Interaction System </a><br>
+            <img class="subdirectory-arrow" src="img/subdirectory_arrow_right.svg" alt="">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/tree/main/Source/Equippables" target="_blank">
+                Equippables </a><br>
+            &emsp;
+            <img class="subdirectory-arrow" src="img/subdirectory_arrow_right.svg" alt="">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/tree/main/Source/Weapons" target="_blank">
+                Weapons </a><br>
+            <img class="subdirectory-arrow" src="img/subdirectory_arrow_right.svg" alt="">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/tree/main/Source/InventorySystem" target="_blank">
+                Inventory System </a><br>
+            &emsp;
+            <img class="subdirectory-arrow" src="img/subdirectory_arrow_right.svg" alt="">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/tree/main/Source/InventorySystemEditor" target="_blank">
+                Inventory System Editor </a><br>
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="character-interaction-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Interaction: Character Component</h2>
+        <p class="grid-item-summary">
+            For a character to interact with a target they need to have a
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InteractionSystem/Private/CharacterInteractComponent.cpp" target="_blank">
+                Character Interact Component</a>.
+            This component has two different modes that can be enabled, an Area Interact Mode, and a Forward Interact Mode. The Area Interact Mode
+            will check in a specified radius around the character for Interactables, and will select the best one based on distance and how "in-front"
+            (using Dot Product) of the character it is. The Forward Interact requires that the character has a camera, if they do it shoots a trace
+            from the Cameras position forward. If Area Interact is enabled alongside Forward Interact, the Forward Interact will always take priority.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="interaction-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Interaction: Actors</h2>
+        <p class="grid-item-summary">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InteractionSystem/Private/InteractableActor.cpp" target="_blank">
+                Interactable Actors</a>
+            are the base class for any object that wants to easily include interaction logic. Utilizing an
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InteractionSystem/Public/InteractInterface.h" target="_blank">
+                Interface</a>,
+            the object will toggle a
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InteractionSystem/Private/InteractWidget.cpp" target="_blank">
+                UI Widget</a>
+            describing the interactable and will have a virtual function that defines what happens when interacted with. The UI widget can either be
+            set to static on screen, or hover over the object in the world. This is controlled in the
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InteractionSystem/Public/InteractSettings.h" target="_blank">
+                Interact Settings</a>
+            globally, or it can be overridden on a per-actor basis.
+
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="equippables-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Equippables</h2>
+        <p class="grid-item-summary">
+            An
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/Equippables/Private/Equippable.cpp" target="_blank">
+                Equippable</a>
+            is the base class for an object that can be picked up and equipped. The Actor that requests the pickup needs to have an
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InteractionSystem/Private/InteractableActor.cpp" target="_blank">
+                Equipment Inventory Component</a>
+            for the pickup to be successful. The component will keep track of all carried Equipment and has slots that can carry a specified amount
+            of equippables.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="weapons-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Weapons: Guns</h2>
+        <p class="grid-item-summary">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/Weapons/Private/Gun.cpp" target="_blank">
+                Guns</a>
+            inherit from Equippables, meaning they share the same pickup and Equip logic. By default, they include a
+             <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/Weapons/Private/ShootingComponent.cpp" target="_blank">
+                Shooting Component </a>
+            and will fire when used. The shooting component, like it's name implies, handles everything an actor would need to shoot a projectile.
+            It can fire either a Hitscan or Physical projectile with various parameters like ammo, fire rate, spread, recoil, and more being easily modifiable.
+            Secondary and Tertiary actions can be easily added to guns via virtual functions both in C++ or in Blueprints, making it easier to design
+            weapons that perform unique actions, e.g. A grenade launcher secondary fire.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="recoil-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Weapons: Recoil</h2>
+        <p class="grid-item-summary">
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/Weapons/Private/ShootingComponent.cpp" target="_blank">
+                Shooting Components </a>
+            have an option to enable recoil. Recoil works by setting a target rotation that the camera will attempt to interpolate to.
+            Recoil Recovery has been implemented, meaning that once the recoil reaches it's target, it will quickly snap back to where the first shot
+            was fired.
+
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="explosions-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Weapons: Explosions</h2>
+        <p class="grid-item-summary">
+            The logic of Explosions is handled in an
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/Weapons/Private/ExplosiveComponent.cpp" target="_blank">
+                Explosive Component</a>.
+            They feature Fuse Times, a Health feature, and customizable Blast Radius, Damage, and Physics Impulse. To avoid the issue of
+            invalid references when an explosion triggers another explosion, I've made an
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/Weapons/Private/ExplosiveSubsystem.cpp" target="_blank">
+            Explosion Queue</a>
+            system. This way whenever an explosion
+            is supposed to occur, instead of immediately activating, it adds itself to a global queue. Every tick the queue triggers it's next
+            available explosive.
+        </p>
+    </div>
+</div>
+
+<div class="mechanics-grid-container">
+    <div class="mechanics-grid-item">
+        <img class="mechanics-media" id="inventory-media" src="img/placeholder-1920x1080.png" alt="">
+    </div>
+    <div class="mechanics-grid-item">
+        <h2 class="mechanics-title">Inventory</h2>
+        <p class="grid-item-summary">
+            The Inventory uses a slot system. In the
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InventorySystem/Private/InventoryComponent.cpp" target="_blank">
+                Inventory Component</a>
+            you can specify the number of slots available and the number of columns (for the UI elements).
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InventorySystem/Public/InventoryItemDataAsset.h" target="_blank">
+                Inventory Items</a>
+            are stored as Data Assets. The Data Assets contain information like the name of the item and the icon to show in the inventory UI.
+            The UI is split into 3 widget classes
+            (<a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InventorySystem/Private/InventoryWidget.cpp" target="_blank">Inventory Widget</a>,
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InventorySystem/Private/InventorySlotWidget.cpp" target="_blank">
+                Inventory Slot Widget</a>, and
+            <a class="highlighted-text" href="https://github.com/gabegera/ImmersiveSim/blob/main/Source/InventorySystem/Private/InventoryMoveWidget.cpp" target="_blank">
+                Inventory Move Widget</a>).
+            The Inventory Slots are assigned by fetching the Index of an inventory item based upon their row and column position. They can be picked up and moved by clicking
+            on an occupied slot and then clicking on a target slot.
+        </p>
+    </div>
+</div>
+
+</body>
+
+</html>

@@ -107,7 +107,11 @@
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Double Jump and Dash</h2>
         <p class="grid-item-summary">
-            The Player character has movement very similar to Doom Eternal. They are able to double jump and have a dash move that only recharges when on the ground.
+            The
+            <a class="highlighted-text" href="https://github.com/gabegera/Gera_MovementShooter/blob/main/Source/Gera_MovementShooter/Private/ShooterPlayerCharacter.cpp" target="_blank">
+                Player Character
+            </a>
+            has movement very similar to Doom Eternal. They are able to double jump and have a dash move that only recharges when on the ground.
             The Dash uses the normal of the ground below the player to ensure that it's consistent on flat ground and when using it on slopes.
         </p>
     </div>
@@ -122,7 +126,12 @@
         <p class="grid-item-summary">
             Weapons can be either Hitscan or Projectile based. They have been programmed to add physics impulses to whatever objects they hit.
             Weapons have a recoil property that can move the camera forcing the player to control the weapon. There is also a recoil recovery
-            system returning the crosshair to it's starting position if the player didn't move the camera.
+            system returning the crosshair to it's starting position if the player didn't move the camera. For this implementation of shooting
+            I stored the code in the
+            <a class="highlighted-text" href="https://github.com/gabegera/Gera_MovementShooter/blob/main/Source/Gera_MovementShooter/Private/ShooterCharacter.cpp" target="_blank">
+                Player Character
+            </a>
+            . In my more recent projects I have moved to making weapons their own independent actors.
         </p>
     </div>
 </div>
@@ -134,8 +143,9 @@
     <div class="mechanics-grid-item">
         <h2 class="mechanics-title">Grenades</h2>
         <p class="grid-item-summary">
-            There are two types of grenades, Frag Grenades and Sticky Grenades. Frags will bounce around while Sticky 'Nades will get stuck to
-            any physics object. Either grenade can be shot at for an early detonation and they will apply a physics impulse when exploding.
+            There are two types of grenades, Frag Grenades and Sticky Grenades. Frags will bounce around while Sticky grenades will get stuck to
+            any physics object. Either grenade can be shot at for an early detonation. When exploding they will apply a physics impulse to nearby
+            objects.
         </p>
     </div>
 </div>
